@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  docname: MyString
+  docaddress: MyString
+  docnumber: MyString
+  clinic: MyString
+
+two:
+  docname: MyString
+  docaddress: MyString
+  docnumber: MyString
+  clinic: MyString

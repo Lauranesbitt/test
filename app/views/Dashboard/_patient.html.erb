@@ -1,0 +1,30 @@
+<h4 class="card-header">
+  Patient
+</h4>
+<div class="card-body">
+
+  <% if @doc_user.current_patient.nil? %>
+
+    <h4>Name:</h4>
+    <br>
+    <div class="float-left">
+      <%= form_tag patient_search_path, method: :get do %>
+        <%= text_field_tag :patient_name%>
+        <%= submit_tag 'Search', name: nil, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+    <div class="float-right">
+      <%= button_to 'Create', new_patient_path, method: :get, class: "btn btn-secondary" %>
+    </div>
+
+  <% else %>
+    <h5 class="card-title"><%= @doc_user.current_patient.name %></h5>
+    <p class="card-text">Ph No: <%= @doc_user.current_patient.number %></p>
+    <p class="card-text">DOB: <%= @doc_user.current_patient.birthday %></p>
+    <div class="float-right">
+      <%= link_to 'Close', patient_close_path(patient_close: "true"), method: :get, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+</div>

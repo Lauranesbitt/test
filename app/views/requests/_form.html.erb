@@ -1,0 +1,31 @@
+<%= form_with(model: request, local: true) do |form| %>
+  <% if request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :request %>
+    <%= form.text_field :request, id: :request_request %>
+  </div>
+  <div class="field">
+      <%= form.label :patient %>
+      <%= form.select :patient, options_for_select(Patient.all.map{|p| p.name}), { :include_blank => true, :prompt => 'Select Patient'} %>
+    </div>
+  </br>
+  <div class="field">
+      <%= form.label :hospital %>
+      <%= form.select :hospital, options_for_select(Hospital.all.map{|h| h.hospitalname}), { :include_blank => true, :prompt => 'Select Hospital'} %>
+    </div>
+  </br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

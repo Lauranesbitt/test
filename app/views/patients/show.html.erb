@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @patient.number %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @patient.birthday %>
+</p>
+
+<p>
+  <strong>Injection:</strong>
+  <%= @patient.injection %>
+</p>
+
+<p>
+  <strong>Injury:</strong>
+  <%= @patient.injury %>
+</p>
+
+<p>
+  <strong>Observations:</strong>
+  <%= @patient.observations %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

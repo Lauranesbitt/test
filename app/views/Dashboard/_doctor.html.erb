@@ -1,0 +1,9 @@
+<h4 class="card-header">
+  Doctor
+</h4>
+<div class="card-body">
+  <h5 class="card-title"><%= @doctor.docname %></h5>
+  <p class="card-text">Address: <%= @doctor.docaddress %></p>
+  <p class="card-text">Ph No: <%= @doctor.docnumber %></p>
+  <%= button_to 'Edit', edit_doctor_path(@doctor), method: :get, class: "btn btn-primary" %>
+</div>

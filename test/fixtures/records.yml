@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  prescription: MyString
+  infection: MyString
+  appointment: MyString
+  Obs: MyString
+  patient: MyString
+
+two:
+  description: MyString
+  prescription: MyString
+  infection: MyString
+  appointment: MyString
+  Obs: MyString
+  patient: MyString

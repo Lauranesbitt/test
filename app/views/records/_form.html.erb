@@ -1,0 +1,48 @@
+<%= form_with(model: record, local: true) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :record_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prescription %>
+    <%= form.text_field :prescription, id: :record_prescription %>
+  </div>
+
+  <div class="field">
+    <%= form.label :infection %>
+    <%= form.text_field :infection, id: :record_infection %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appointment %>
+    <%= form.text_field :appointment, id: :record_appointment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Obs %>
+    <%= form.text_field :Obs, id: :record_Obs %>
+  </div>
+
+  <div class="field">
+      <%= form.label :patient %>
+      <%= form.select :patient, options_for_select(Patient.all.map{|p| p.name}), { :include_blank => true, :prompt => 'Select Patient'} %>
+    </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
