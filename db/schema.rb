@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20180327141507) do
     t.string "address"
     t.string "number"
     t.string "birthday"
-    t.string "injection"
+    t.string "infection"
     t.string "injury"
     t.string "observations"
     t.datetime "created_at", null: false

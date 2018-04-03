@@ -5,7 +5,7 @@ class CreatePatients < ActiveRecord::Migration[5.1]
       t.string :address
       t.string :number
       t.string :birthday
-      t.string :injection
+      t.string :infection
       t.string :injury
       t.string :observations
 
