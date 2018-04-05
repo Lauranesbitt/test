@@ -21,10 +21,12 @@
     </div>
   </br>
   <div class="field">
-      <%= form.label :hospital %>
-      <%= form.select :hospital, options_for_select(Hospital.all.map{|h| h.hospitalname}), { :include_blank => true, :prompt => 'Select Hospital'} %>
-    </div>
-  </br>
+   <%= form.label :hospital %>
+   <br>
+   <%= form.select :hospital_id, options_for_select(Hospital.all.map{|h| [h.hospitalname, h.id]}), { :include_blank => true} %>
+ </div>
+</br>
+
   <div class="actions">
     <%= form.submit %>
   </div>

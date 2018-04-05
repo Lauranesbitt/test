@@ -31,7 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-
+gem 'therubyracer'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem "bootstrap-sass-rails"
 
 gem 'jquery-rails'
 group :development, :test do
