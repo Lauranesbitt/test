@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :dashboards
    devise_for :users
    devise_scope :user do
   authenticated :user do
-    root 'patients#index', as: :authenticated_root
+    root 'dashboards#index', as: :authenticated_root
   end
 
   unauthenticated do
@@ -14,14 +15,7 @@ resources :requests
  resources :hospitals
  resources :doctors
  resources :records
- get 'reviews/index'
-
- get 'reviews/show'
-
- get 'reviews/new'
-
- get 'reviews/edit'
-
+ resources :dashboard
  resources :patients
 
 

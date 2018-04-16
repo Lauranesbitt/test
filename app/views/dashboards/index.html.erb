@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboards.each do |dashboard| %>
+
+    <% end %>
+  </tbody>
+</table>
+<td><button><%= link_to 'Patients', href="http://0.0.0.0:3000/patients" %></button></td>
+<td><button><%= link_to 'Doctors', href="http://0.0.0.0:3000/doctors" %></button></td>
+<td><button><%= link_to 'Clinics', href="http://0.0.0.0:3000/clinics" %></button></td>
+<td><button><%= link_to 'Hospitals', href="http://0.0.0.0:3000/hospitals" %></button></td>
+<td><button><%= link_to 'Create Request', href="http://0.0.0.0:3000/requests" %></button></td>

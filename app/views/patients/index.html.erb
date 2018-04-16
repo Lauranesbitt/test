@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
+  <%= link_to '🏠', href="http://0.0.0.0:3000/dashboards" %></button>
+  <%= link_to '👨🏻‍⚕️', href="http://0.0.0.0:3000/doctors" %></button>
+    <%= link_to '🏥‍', href="http://0.0.0.0:3000/hospitals" %></button>
 
+    
 <h1>Patients</h1>
-
 <table>
   <thead>
     <tr colspan="3"></th>
@@ -35,6 +38,5 @@
 </table>
 
 <br>
-
 <td><button><%= link_to 'New Patient', new_patient_path %></button></td>
 <td><button><%= link_to 'Create Request', href="http://0.0.0.0:3000/requests" %></button></td>
