@@ -1,6 +1,6 @@
 class Request < ApplicationRecord
-  has_many :patients
-  has_many :hospitals
+  has_many :requests
+  validates :request,presence: true
 
 
 end

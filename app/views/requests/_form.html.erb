@@ -16,15 +16,11 @@
     <%= form.text_field :request, id: :request_request %>
   </div>
   <div class="field">
-      <%= form.label :patient %>
-      <%= form.select :patient, options_for_select(Patient.all.map{|p| p.name}), { :include_blank => true, :prompt => 'Select Patient'} %>
-    </div>
-  </br>
-  <div class="field">
-   <%= form.label :hospital %>
-   <br>
-   <%= form.select :hospital_id, options_for_select(Hospital.all.map{|h| [h.hospitalname, h.id]}), { :include_blank => true} %>
- </div>
+    <%= form.label :hospital %>
+    <br>
+    <%= form.select :hospital_name, options_for_select(Hospital.all.map{|h| [h.hospitalname, h.id]}), { :include_blank => true} %>
+  </div>
+
 </br>
 
   <div class="actions">
