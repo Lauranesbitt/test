@@ -15,7 +15,7 @@ resources :requests
  resources :hospitals
  resources :doctors
  resources :records
- resources :dashboard
+ resources :dashboards
  resources :patients
 
 
