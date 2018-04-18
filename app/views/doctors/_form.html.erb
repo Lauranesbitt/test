@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :docname %>
+    <%= form.label :doctor_name %>
     <%= form.text_field :docname, id: :doctor_docname %>
   </div>
 
   <div class="field">
-    <%= form.label :docaddress %>
+    <%= form.label :doctor_address %>
     <%= form.text_field :docaddress, id: :doctor_docaddress %>
   </div>
 
   <div class="field">
-    <%= form.label :docnumber %>
+    <%= form.label :doctor_number %>
     <%= form.text_field :docnumber, id: :doctor_docnumber %>
   </div>
 
   <div class="field">
-      <%= form.label :clinic %>
-      <%= form.select :clinic, options_for_select(Clinic.all.map{|c| c.clinicname}), { :include_blank => true, :prompt => 'Select Clinic'} %>
-    </div>
+    <%= form.label :clinic_name %>
+    <%= form.text_field :clinic, id: :doctor_clinic %>
+  </div>
   </br>
 
   <div class="actions">

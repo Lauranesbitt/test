@@ -15,10 +15,11 @@
     <%= form.label :request %>
     <%= form.text_field :request, id: :request_request %>
   </div>
+</br>
   <div class="field">
     <%= form.label :hospital %>
     <br>
-    <%= form.select :hospital_name, options_for_select(Hospital.all.map{|h| [h.hospitalname, h.id]}), { :include_blank => true} %>
+    <%= form.select :hospital_id, options_for_select(Hospital.all.map{|h| [h.hospitalname, h.id]}), { :include_blank => true} %>
   </div>
 
 </br>

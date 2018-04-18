@@ -5,6 +5,7 @@ class DoctorsController < ApplicationController
   # GET /doctors.json
   def index
     @doctors = Doctor.all
+
   end
 
   # GET /doctors/1
@@ -15,6 +16,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/new
   def new
     @doctor = Doctor.new
+
   end
 
   # GET /doctors/1/edit
@@ -69,6 +71,6 @@ class DoctorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_params
-      params.require(:doctor).permit(:docname, :docaddress, :docnumber, :clinicname)
+      params.require(:doctor).permit(:docname, :docaddress, :docnumber, :clinic)
     end
 end

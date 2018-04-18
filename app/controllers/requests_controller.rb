@@ -15,7 +15,7 @@ class RequestsController < ApplicationController
   # GET /requests/new
   def new
     @request = Request.new
-    @hospital = Request.new
+
   end
 
   # GET /requests/1/edit
@@ -26,7 +26,8 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-    @hospital = Hospital.new(params[:hospitalname])
+    @request.save
+
 
     respond_to do |format|
       if @request.save
@@ -72,6 +73,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:request, :hospitalname)
+      params.require(:request).permit(:request)
     end
 end
